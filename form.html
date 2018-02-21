@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Подать электронное обращение</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+ <h1>Hello</h1>
+ <form name="feedback">
+     <fieldset>
+         <legend>Обращение</legend>
+         <p><label for="fio">Фамилия, имя, отчество <em>* </em></label><input type="text" id="fio"></p>
+         <p><label for="email">E-mail для ответа <em>* </em></label><input type="email" id="email"></p>
+         <p><label for="mail">Почтовый адрес для ответа <em>* </em></label><input type="text" id="mail"></p>
+         <p><label for="appeal">Текст обращения <em>* </em></label><textarea id="appeal" cols="40" rows="6"></textarea></p>
+         <p><label for="destination">Кому обращение <em>* </em></label>
+            <select>
+                <option value="General">Руководство ТФОМС</option>
+                <option value="Reception">Приемная</option>
+                <option value="OZPZ">Отдел защиты прав застрхованных</option>
+                <option value="OOMS">Отдел организации медицинского страхования</option>
+                <option value="Chief">Начальник</option>
+                <option value="OA">Отдел автоматизации</option>
+                <option value="LO">Юридический отдел</option>
+                <option value="KRO">Контрольно-ревизионный отдел</option>
+                <option value="IAO">Информационно-аналитический отдел</option>
+                <option value="OBU">Отдел бухгалтерского учета</option>
+                <option value="FEO">Финансово-экономический отдел</option>
+            </select>    
+        </p>
+         <p><label for="file_appeal">Приложение <em>* </em></label><input type="file" id="file_appeal"></p>
+     </fieldset>
+     <p><input type="checkbox">Я ознакомен с <a href="http://oms.karelia.ru/about/person_data.php">Политикой обработки персональных данных в ТФОМС РК</a></a></p>
+     <p><input type="submit" value="Отправить"></p>
+ </form>   
+</body>
+</html>
