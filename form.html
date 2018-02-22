@@ -9,22 +9,23 @@
     <script src="main.js"></script>
 </head>
 <body>
- <h1>Hello</h1>
  <form name="feedback">
      <fieldset>
          <legend>Обращение</legend>
          <p><em>* </em> - поля обязательны для заполнения</p>
-         <p><label for="fio">Фамилия, имя, отчество <em>* </em></label><input type="text" id="fio" required pattern="^[А-ЯЁ][а-яё\s]+$"></p>
-         <p><label for="email">E-mail для ответа <em>* </em></label><input type="email" id="email" required></p>
-         <p><label for="mail">Почтовый адрес для ответа <em>* </em></label><input type="text" id="mail" required></p>
+         <p><label for="surname">Фамилия <em>* </em></label><input type="text" id="surname" required pattern="^[А-ЯЁ][а-яё\s]+$" size="40"></p>
+         <p><label for="name">Имя <em>* </em></label><input type="text" id="name" required pattern="^[А-ЯЁ][а-яё\s]+$" size="45"></p>
+         <p><label for="middle_name">Отчество </label><input type="text" id="middle_name" pattern="^[А-ЯЁ][а-яё\s]+$" size="42"></p>
+         <p><label for="email">E-mail для ответа <em>* </em></label><input type="email" id="email" required size="32"></p>
+         <p><label for="mail">Почтовый адрес для ответа <em>* </em></label><input type="text" id="mail" required size="22"></p>
          <p><label for="appeal">Текст обращения <em>* </em></label><textarea id="appeal" cols="40" rows="6" required></textarea></p>
          <p><label for="destination" required>Кому обращение <em>* </em></label>
             <select>
                 <option value="General">Руководство ТФОМС</option>
                 <option value="Reception">Приемная</option>
                 <option value="OZPZ">Отдел защиты прав застрхованных</option>
-                <option value="OOMS">Отдел организации медицинского страхования</option>
-                <option value="Chief">Начальник</option>
+                <option value="OOMS">Отдел организации ОМС</option>
+                <option value="Chief">Начальник управления организации ОМС и ОА </option>
                 <option value="OA">Отдел автоматизации</option>
                 <option value="LO">Юридический отдел</option>
                 <option value="KRO">Контрольно-ревизионный отдел</option>
