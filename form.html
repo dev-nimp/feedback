@@ -43,7 +43,7 @@
                 <option value="Reception">Приемная</option>
                 <option value="OZPZ">Отдел защиты прав застрхованных</option>
                 <option value="OOMS">Отдел организации медицинского страхования</option>
-                <option value="Chief">Начальник</option>
+                <option value="Chief">Начальник отдела ОМС и ОА</option>
                 <option value="OA">Отдел автоматизации</option>
                 <option value="LO">Юридический отдел</option>
                 <option value="KRO">Контрольно-ревизионный отдел</option>
@@ -58,7 +58,12 @@
      <p><input type="submit" value="Отправить" id="submit_appeal" disabled></p>
  </form>   
  <script>
-   
+   window.sputnikCounter = window.sputnikCounter || { };
+   window.sputnikCounter.events = window.sputnikCounter.events || [ ];
+   window.sputnikCounter.events.push({form: "open"});
+   window.sputnikCounter.events.push({form: "submit"});
+   window.sputnikCounter.events.push({form: "success"});
+   window.sputnikCounter.events.push({form: "error"});
  </script>
 </body>
 </html>
