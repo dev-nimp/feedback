@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Подать электронное обращение</title>
     <style type="text/css">
         em {
@@ -13,11 +15,13 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
+
 <body>
+<div class="container-fluid">
  <form name="feedback">
      <fieldset>
          <legend>Форма приёма обращений:</legend>
-         <p style="color:red">Внимание - форма приёма обращений работает в тестовом режиме.</p> 
+         <p class="lead"><mark>Внимание - форма приёма обращений работает в тестовом режиме.</mark></p> 
          <p>Для отправки вашего вопроса воспользуйтесь старой формой "<a href="http://oms.karelia.ru/contacts/feedback.php">Обратная связь</a>"</p>
          <p><em>* </em> - поля обязательны для заполнения</p>
          <p><label for="form_appeal">Форма обращения </label>
@@ -28,7 +32,7 @@
                 <option value="message">Сообщение</option>
             </select>
         </p>
-         <p><label for="surname">Фамилия <em>* </em></label><input type="text" id="surname" required pattern="^[А-ЯЁ][а-яё\s]+$"></p>
+         <p><label for="surname">Фамилия <em>* </em></label><input type="text" id="surname"  required pattern="^[А-ЯЁ][а-яё\s]+$"></p>
          <p><label for="name">Имя <em>* </em></label><input type="text" id="name" required pattern="^[А-ЯЁ][а-яё\s]+$"></p>
          <p><label for="middle_name">Отчество </label><input type="text" id="middle_name" required pattern="^[А-ЯЁ][а-яё\s]+$"></p>
          <p><label for="age">Возраст (лет) </label><input type="text" id="age" pattern="^[0-9]{2}"></p>
@@ -40,7 +44,7 @@
             <input type="radio" id="constant" name="registration" value="Постоянная"><label for="registration_constant">Постоянная</label>
             <input type="radio" id="temporary" name="registration" value="Временная"><label for="registration_temporary">Женский</label>
         </p>
-         <p><label for="email">E-mail для ответа <em>* </em></label><input type="email" id="email" required></p>
+         <p><label for="email">E-mail для ответа <em>* </em></label><input type="email" id="email" required placeholder="Введите e-mail"></p>
          <p><label for="mail">Почтовый адрес для ответа <em>* </em></label><input type="text" id="mail" required></p>
          <p><label for="phone">Контактный телефон <em>* </em></label><input type="text" id="phone" required></p>
          <p><label for="appeal">Текст обращения <em>* </em></label><textarea id="appeal" cols="40" rows="6" required></textarea></p>
@@ -49,12 +53,15 @@
                 <option value="General">Руководство ТФОМС</option>
             </select>    
         </p>
-         <p><label for="file_appeal">Приложение </label><input type="file" id="file_appeal"></p>
+         <p><label for="file_appeal">Приложение </label><input type="file" id="file_appeal" class="form-control-file"></p>
      </fieldset>
-     <p><input type="checkbox" onchange="document.getElementById('submit').disabled = !this.checked">Я ознакомен с <a href="http://oms.karelia.ru/about/person_data.php">Политикой обработки персональных данных в ТФОМС РК</a></p>
-     <p><input type="submit" value="Отправить" id="submit" disabled></p>
+     <p><input type="checkbox"  onchange="document.getElementById('submit').disabled = !this.checked">Я ознакомен с <a href="http://oms.karelia.ru/about/person_data.php">Политикой обработки персональных данных в ТФОМС РК</a></p>
+     <p><input type="submit" value="Отправить" id="submit" disabled class="btn btn-outline-primary">
+    <input type="button" value="Сбросить" id="reset" class="btn btn-outline-danger"></p>
  </form> 
- 
+</div>
+
+
  <script type="text/javascript">
     (function(d, t, p) {
         var j = d.createElement(t); j.async = true; j.type = "text/javascript";
@@ -71,5 +78,10 @@
    window.sputnikCounter.events.push({form: "success"});
    window.sputnikCounter.events.push({form: "error"});
  </script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>
